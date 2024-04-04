@@ -71,9 +71,6 @@ export default class ShowShoe extends Component {
         return this.state.arrCart.reduce((total, product) => total += (product.Quantity*product.Price), 0);
     }
     getKeyWord = (keyword) => {
-        const afterSearch = this.state.listProduct.filter((product) => {
-            return product.name.toLowerCase().indexOf(keyword.toLowerCase()) !== -1
-        });
         this.setState({
             keyword,
         })
